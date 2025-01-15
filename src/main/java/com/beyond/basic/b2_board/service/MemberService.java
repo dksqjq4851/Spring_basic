@@ -4,8 +4,10 @@ import com.beyond.basic.b2_board.domain.Member;
 import com.beyond.basic.b2_board.dtos.MemberCreateDto;
 import com.beyond.basic.b2_board.dtos.MemberDetailDto;
 import com.beyond.basic.b2_board.dtos.MemberListRes;
-import com.beyond.basic.b2_board.repository.MemberJdbcRepository;
+//import com.beyond.basic.b2_board.repository.MemberJdbcRepository;
+import com.beyond.basic.b2_board.repository.MemberJpaRepository;
 import com.beyond.basic.b2_board.repository.MemberMemoryRepository;
+//import com.beyond.basic.b2_board.repository.MemberMyBatisRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +21,7 @@ import java.util.stream.Collectors;
 public class MemberService {
 
     @Autowired
-    private MemberJdbcRepository memberRepository;
+    private MemberJpaRepository memberRepository;
 
     public List<MemberListRes> findAll(){
 //        List<Member> members = memberMemoryRepository.findAll();
