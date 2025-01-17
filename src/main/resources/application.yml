@@ -26,7 +26,7 @@ spring:
 #      create: 매번 table을 drop후 재생성
 #      update : entity변경사항만 alter를 적용하고 기존데이터 유지.(모든 변경사항을 alter하는 것은 아님)
 #      validate: 실제DDB와의 차이만을 check
-      ddl-auto: create
+      ddl-auto: update
 #      콘솔창에 ddl, dml문을 출력하여 보여주는 옵션
     show_sql: true
 
